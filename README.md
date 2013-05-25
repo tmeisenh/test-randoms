@@ -4,7 +4,7 @@ TestRandom
 Trivial static methods to create random numbers for testing.
 
 Just do a static import for ...
-        import static com.indexoutofbounds.random.Numbers.*;
+  import static com.indexoutofbounds.random.Numbers.*;
 And that's it.
 
 ```java
@@ -21,21 +21,23 @@ public class DemoTest {
     public void testSomething() {
         // Pretend we're driving out the design for the TestObject below.
         // Insted of writing tests like
-        assertTrue(testObject.isEven(2));
+        assertTrue(testObject.isFoo(2));
         // which could technically lead to implementation of isEven to look
         // like...
         // return number.intValue() == 2;
         // which would technically pass the test.
 
         // we could do
-        assertTrue(testObject.isEven(getRandomNumber(1, 5)));
+        assertTrue(testObject.isFoo(getRandomNumber(1, 5)));
+        // which, depeneding on what isFoo needs to do would make our tests less fragile.
     }
 
     public class TestObject {
 
-        public boolean isEven(Number number) {
+        public boolean isFoo(Number number) {
             return false;
         }
     }
 }
 ```
+Not the best example but you should be smart enough to get the point.
