@@ -4,7 +4,9 @@ TestRandom
 Trivial static methods to create random numbers for testing.
 
 Just do a static import for ...
+```java
   import static com.indexoutofbounds.random.Numbers.*;
+```
 And that's it.
 
 ```java
