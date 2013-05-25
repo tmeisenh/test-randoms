@@ -10,15 +10,38 @@ public class Numbers {
 	private Numbers() {
 	}
 
+	/**
+	 * Generates a number between Short.MIN_VALUE and Short.MAX_VALUE
+	 * 
+	 * @return Number
+	 */
 	public static Number getRandomNumber() {
 		return getRandomNumber(DEFAULT_MINIMUM, DEFAULT_MAXIMUM);
 	}
 
+	/**
+	 * Generates a number between min and max
+	 * 
+	 * @param min
+	 *            minimum value
+	 * @param max
+	 *            maximum value
+	 * @return Number
+	 * @throws RuntimeException
+	 *             is min == max || min > max
+	 */
 	public static Number getRandomNumber(int min, int max) {
 		checkNumbers(min, max);
 		return findRandomNumber(min, max);
 	}
 
+	/**
+	 * Generates a random positive number between 1 and max
+	 * 
+	 * @param max
+	 *            maximum value
+	 * @return
+	 */
 	public static Number getRandomPositiveNumber(int max) {
 		return findRandomNumber(1, max);
 	}
