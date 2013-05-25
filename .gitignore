@@ -1,0 +1,27 @@
+# Java class files
+*.class
+
+# Java jar files
+*.jar
+
+# build system generated directories
+bin/
+target/
+build/
+.gradle
+
+# Eclipse project files
+.classpath
+.project
+.settings
+
+# IDEA project files
+*.iws
+*.ipr
+*.iml
+
+.Spotlight*
+._.Trashes
+.fse*
+
+*.swp
