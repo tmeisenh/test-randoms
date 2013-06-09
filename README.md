@@ -24,7 +24,7 @@ public class DemoTest {
         // Pretend we're driving out the design for the TestObject below.
         // Insted of writing tests like
         assertTrue(testObject.isFoo(2));
-        // which could technically lead to implementation of isEven to look
+        // which could technically lead to implementation of isFoo to look
         // like...
         // return number.intValue() == 2;
         // which would technically pass the test.
