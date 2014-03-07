@@ -1,4 +1,8 @@
 apply plugin: 'java'
+apply plugin: 'maven'
+
+version = '0.5'
+sourceCompatibility = 1.6
 
 buildscript {
   repositories {
@@ -16,7 +20,19 @@ dependencies {
   testCompile 'junit:junit:4.10'
 }
 
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'test-randoms', 'Implementation-Version': version
+    }
+}
+
 task "create-dirs" << {
    sourceSets*.java.srcDirs*.each { it.mkdirs() }
    sourceSets*.resources.srcDirs*.each { it.mkdirs() }
+}
+
+install {
+    repositories.mavenInstaller {
+        pom.groupId = 'com.indexoutofbounds'
+    }
 }
